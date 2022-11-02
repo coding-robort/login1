@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form Ui by Robort</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="bg-box">
+
+    </div>
+
+    <main>
+        <!-- <button class="login" onclick="clicked()" id="login">Login</button> -->
+        <section class="login-box" id="loginBox">
+            <h1>Login</h1>
+            <form method="get" action="i.html">
+                <input type="text" placeholder="username" class="user">
+                <input type="password" name="password" id="pass" class="pass" placeholder="password">
+                <br>
+                <input class="rem" type="checkbox" name="rem" id="rem">
+                <label for="rem"> Remember me</label>
+
+                <button class="btn" type="submit">Login</button>
+            </form>
+            <p class="forget">Forget <a href="">Password</a></p>
+            <p class="new-acc">Need an <a href="#">Account</a></p>
+        </section>
+    </main>
+
+
+    <script>
+        function clicked() {
+            // get reference to login container
+            let loginBox = document.getElementById("loginBox");
+
+            // get reference to login button
+            let loginBtn = document.getElementById("login");
+            //show login box
+            loginBox.classList.add(" myScale");
+            loginBox.style.opacity = 1;
+
+            //hide login btn
+            loginBtn.style.display = "none";
+
+
+        }
+    </script>
+</body>
+
+</html>

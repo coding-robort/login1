@@ -1,0 +1,221 @@
+@-webkit-keyframes scaleIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --my-border-color: rgba(255, 255, 255, 0.3);
+  --my-border-radius: 8px;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+}
+
+:-ms-input-placeholder {
+  color: white;
+}
+
+::-ms-input-placeholder {
+  color: white;
+}
+
+::placeholder {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #363a4e;
+}
+
+body {
+  font-family: "poppins";
+  color: white;
+  background-color: #678077;
+  position: relative;
+  font-size: 14px;
+}
+
+body .bg-box {
+  position: absolute;
+  background-color: #50c7a7;
+  width: 100%;
+  height: 100vh;
+  -webkit-clip-path: polygon(100% 0%, 0% 100%, 0% 0%);
+          clip-path: polygon(100% 0%, 0% 100%, 0% 0%);
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  -webkit-animation: scaleIn 2s;
+          animation: scaleIn 2s;
+}
+
+main .login {
+  padding: 15px 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 1px solid var(--my-border-color);
+  border-radius: var(--my-border-radius);
+  cursor: pointer;
+  z-index: 100;
+}
+
+main .myScale {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  background-color: tomato;
+}
+
+main .login-box {
+  -webkit-transition: 2s;
+  transition: 2s;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--my-border-color);
+  border-radius: var(--my-border-radius);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 30px 20px;
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+main .login-box h1 {
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+main .login-box h1:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+main .login-box form .user,
+main .login-box form .pass {
+  margin: 10px 0px;
+  padding: 15px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: transparent;
+  -webkit-transition: .2s;
+  transition: .2s;
+  color: #475952;
+}
+
+main .login-box form .user:hover,
+main .login-box form .pass:hover {
+  -webkit-transform: translateX(3px);
+          transform: translateX(3px);
+}
+
+main .login-box form .user:focus,
+main .login-box form .pass:focus {
+  outline: none;
+  border: 2px solid white;
+}
+
+main .login-box form .rem {
+  margin: 20px 0px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+main .login-box form .rem:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+main .login-box form .btn {
+  background-color: transparent;
+  display: block;
+  padding: 8px 15px;
+  font-weight: bold;
+  border: 1px solid white;
+  color: white;
+  border-radius: var(--my-border-radius);
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main .login-box form .btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: white;
+  color: #50c7a7;
+}
+/*# sourceMappingURL=style.css.map */

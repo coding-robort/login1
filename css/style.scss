@@ -1,0 +1,182 @@
+ @keyframes scaleIn {
+     from {
+         opacity: 0;
+         transform: scale(.7);
+     }
+
+     to {
+         opacity: 1;
+         transform: scale(1);
+     }
+
+ }
+
+ @keyframes slideInRight {
+     from {
+         opacity: 0;
+         transform: translateX(20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateX(0);
+     }
+
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ :root {
+     --my-border-color: rgba(255, 255, 255, 0.3);
+     --my-border-radius: 8px;
+
+ }
+
+ ::placeholder {
+     color: white;
+ }
+
+
+ a {
+     text-decoration: none;
+     color: rgb(54, 58, 78);
+ }
+
+ body {
+     font-family: "poppins";
+     color: white;
+     background-color: rgb(103, 128, 119);
+     position: relative;
+     font-size: 14px;
+
+     .bg-box {
+         position: absolute;
+         //  top: 0;
+         background-color: rgb(80, 199, 167);
+         width: 100%;
+         height: 100vh;
+         clip-path: polygon(100% 0%, 0% 100%, 0.00% 0.00%);
+     }
+
+ }
+
+ main {
+     position: relative;
+     width: 100%;
+     height: 100vh;
+     animation: scaleIn 2s;
+
+     .login {
+         padding: 15px 30px;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         border: 1px solid var(--my-border-color);
+         border-radius: var(--my-border-radius);
+         cursor: pointer;
+         z-index: 100;
+         //  background-color: transparent;
+     }
+
+     .myScale {
+         transform: scale(1.3);
+         background-color: tomato;
+     }
+
+     .login-box {
+         transition: 2s;
+         background: rgba(255, 255, 255, 0.2);
+         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+         border: 1px solid var(--my-border-color);
+         border-radius: var(--my-border-radius);
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         padding: 30px 20px;
+         width: 400px;
+         display: flex;
+         flex-direction: column;
+         gap: 15px;
+         //  opacity: 0;
+
+         h1 {
+             transition: .2s;
+         }
+
+         h1:hover {
+             transform: scale(1.02);
+         }
+
+         form {
+
+             .user,
+             .pass {
+                 margin: 10px 0px;
+                 padding: 15px;
+                 width: 100%;
+                 border-radius: 5px;
+                 border: 1px solid white;
+                 background-color: transparent;
+                 transition: .2s;
+                 color: rgb(71, 89, 82);
+
+             }
+
+             .user:hover,
+             .pass:hover {
+                 transform: translateX(3px);
+             }
+
+             .user:focus,
+             .pass:focus {
+                 outline: none;
+                 //  color: white;
+                 border: 2px solid rgb(255, 255, 255);
+             }
+
+             .rem {
+                 margin: 20px 0px;
+                 transition: .2s;
+                 cursor: pointer;
+
+             }
+
+             .rem:hover {
+                 transform: scale(1.2);
+             }
+
+             .rem-me {
+                 //  display: inline;
+             }
+
+             .btn {
+                 background-color: transparent;
+                 display: block;
+                 padding: 8px 15px;
+                 font-weight: bold;
+                 border: 1px solid white;
+                 color: white;
+                 border-radius: var(--my-border-radius);
+                 cursor: pointer;
+                 transition: .3s;
+             }
+
+             .btn:hover {
+                 transform: scale(1.1);
+                 background-color: white;
+                 color: rgb(80, 199, 167);
+             }
+
+             .forget {}
+
+             .new-acc {}
+
+         }
+     }
+ }
